@@ -1,0 +1,36 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+
+	"contracts": {
+		"FungibleToken": {
+			"source": "./flow/contract/FungibleToken.cdc",
+			"aliases": {
+				"testnet": "0x907dcef430805a20"
+			}
+		}
+	},
+
+	"networks": {
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	  },
+
+	"accounts": {
+		"testnet":{
+			"address": "0x907dcef430805a20",
+			"keys": "aa9a6de31187e5d05632ecd15cdcacd75fb217e86667807acda08fb737a74599"
+		}
+	},
+
+	"deployments": {
+		"testnet": {
+			"testnet": ["FungibleToken"]
+		  }
+	}
+}
+
+
